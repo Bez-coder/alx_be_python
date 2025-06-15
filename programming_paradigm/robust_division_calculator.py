@@ -23,8 +23,8 @@ def main():
     numerator = sys.argv[1]
     denominator = sys.argv[2]
 
-    result = safe_divide(numerator, denominator)
-    print(result)
+    return f"The result of the division is {num / denom:.1f}"
+
 
 if __name__ == "__main__":
     main()
