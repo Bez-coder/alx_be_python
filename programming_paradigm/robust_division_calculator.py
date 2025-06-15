@@ -7,7 +7,7 @@ def safe_divide(numerator, denominator):
         if denom == 0:
             return "Error: Cannot divide by zero."
 
-        return f"The result of the division is {num / denom:.2f}"
+        return f"The result of the division is {num / denom:.1f}"  # Ensure correct formatting (1 decimal place)
 
     except ValueError:
         return "Error: Please enter numeric values only."
@@ -23,8 +23,8 @@ def main():
     numerator = sys.argv[1]
     denominator = sys.argv[2]
 
-    return f"The result of the division is {num / denom:.1f}"
-
+    result = safe_divide(numerator, denominator)
+    print(result)
 
 if __name__ == "__main__":
     main()
